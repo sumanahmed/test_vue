@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <dashboard></dashboard>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Dashboard from './components/Dashboard.vue'
 
 export default {
-  name: 'app',
+  name: 'App',  
   components: {
-    HelloWorld
+    'dashboard':Dashboard
+  },
+  mounted(){
+    this.getOffers();
   }
 }
 </script>
@@ -23,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
